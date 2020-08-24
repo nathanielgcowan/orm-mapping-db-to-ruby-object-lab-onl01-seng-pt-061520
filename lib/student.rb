@@ -62,6 +62,13 @@ class Student
 end
 
 def self.all_students_in_grade_9
+          sql = <<-SQL
+            SELECT * FROM songs WHERE name = ? 
+        SQL
+
+        DB[:conn].execute(sql, name).map do |row|
+            self.new_from_db(row)
+        end
 end
 
 def self.students_below_12th_grade
