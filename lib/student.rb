@@ -76,7 +76,7 @@ class Student
     sql = <<-SQL
       SELECT COUNT(*)
       FROM students
-      WHERE grade = 12;
+      WHERE grade = 9,10,11;
     SQL
 
     DB[:conn].execute(sql).map do |row|
