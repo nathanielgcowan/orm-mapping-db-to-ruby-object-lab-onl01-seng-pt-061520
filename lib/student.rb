@@ -3,11 +3,10 @@ class Student
 
   def self.new_from_db(row)
     # create a new Student object given a row from the database
-    def initialize(id:, name:, grade:)
-      @id = id
-      @name = name
-      @grade = grade
-    end
+    new_student = self.new
+    new_student.id
+    new_student.name
+    new_student.length
   end
 
   def self.all
