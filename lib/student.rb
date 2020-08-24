@@ -98,11 +98,11 @@ class Student
     end
   end
   
-    def self.first_student_in_grade_10(number)
-    sql = <<-SQL
+    def self.first_student_in_grade_10
       SELECT *
       FROM students
       WHERE grade = 10
+      ORDR BY students.id
       LIMIT 1
     SQL
 
